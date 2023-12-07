@@ -1,0 +1,6 @@
+Inizialmente vediamo che vengono passati dei parametri effettuando prima push del contenuto di registri, successivamente della costante `WH_MOUSE`. Questo è un Windows Hook che viene utilizzato per identificare la periferica da monitorare.
+Successivamente viene chiamata la funzione `SetWindowsHook` che installa l'hook con id `WH_MOUSE`, che effettua il vero e proprio monitoring.
+Infine viene chiamata la funzione `CopyFile`, dopo aver passato come parametri la cartella di startup dove copiare il file e il percorso al malware.
+
+1) il malware in questione è un keylogger che controlla gli input relativi al mouse;
+2) il malware in questione ottiene la persistenza andando a salvarsi nella cartella di startup del sistema operativo.
